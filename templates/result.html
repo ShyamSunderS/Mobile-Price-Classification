@@ -1,0 +1,86 @@
+{%load static%}
+<html>
+<head>
+    <title>Title</title>
+    <style>
+        body
+        {
+            display: table;
+            width: 100%;
+            background-image: url("{% static 'Mobile3.png' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        table,
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+            text-align: center;
+            margin: auto;
+            border: 1px solid #080807;
+            padding: 1rem;
+            width: 50%;
+            background-color: #D6EEEE;
+        }
+        .table {
+            display: table;
+            width: 50%;
+        }
+        .tr {
+            display: table-row;
+        }
+        .thead {
+            display: table-header-group;
+        }
+        .tbody {
+            display: table-row-group;
+        }
+        .tfoot {
+            display: table-footer-group;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Mobile Price Range Based On These Main Features</h1>
+    <table>
+    <thead>
+      <tr>
+        <th>Feature Names</th>
+        <th>Feature Availability/Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Internal Memory</td>
+        <td>{{val7}}GB</td>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>{{val14}}MB</td>
+      </tr>
+      <tr>
+        <td>Battery Power</td>
+        <td>{{val1}}mAh</td>
+      </tr>
+      <tr>
+        <td>4G Availability</td>
+        <td>{{val6}}</td>
+      </tr>
+      <tr>
+        <td>No.of Cores</td>
+        <td>{{val10}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+          <td><b>Price Range</b></td>
+          <td><b>{{result2}}</b></td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
